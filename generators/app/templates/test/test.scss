@@ -1,4 +1,4 @@
-@import "../dist/<%= project_short_name%>.scss";
-.test-<%= project_short_name%>{
-  @include <%= project_short_name%>();
+@import "../dist/<%= project_name%>.scss";
+.test-<%= project_name%>{
+  @include <%= project_name%>();
 }
