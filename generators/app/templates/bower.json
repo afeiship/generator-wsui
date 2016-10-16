@@ -1,0 +1,29 @@
+{
+  "name": "<%= project_name%>",
+  "description": "<%= description %>",
+  "main": [
+    "dist/<%= project_short_name%>.css",
+    "dist/<%= project_short_name%>.scss"
+  ],
+  "authors": [
+    "afei"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "webkit",
+    "cssui",
+    "<%= project_short_name%>"
+  ],
+  "homepage": "https://github.com/afeiship/webkit-cssui-absolute-center",
+  "moduleType": [
+    "amd"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "src"
+  ]
+}
