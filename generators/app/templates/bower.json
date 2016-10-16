@@ -2,8 +2,8 @@
   "name": "<%= project_name%>",
   "description": "<%= description %>",
   "main": [
-    "dist/<%= project_short_name%>.css",
-    "dist/<%= project_short_name%>.scss"
+    "dist/<%= project_name%>.css",
+    "dist/<%= project_name%>.scss"
   ],
   "authors": [
     "afei"
