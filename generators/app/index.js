@@ -42,7 +42,7 @@ module.exports = yeoman.Base.extend({
   },
   _writingCopyFiles: function() {
     this.fs.copy(
-      this.templatePath('{.*,gulp/*}'),
+      this.templatePath('{.*,build/*}'),
       this.destinationPath('.')
     );
   },
