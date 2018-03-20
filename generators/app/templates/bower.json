@@ -14,7 +14,7 @@
     "cssui",
     "<%= project_short_name%>"
   ],
-  "homepage": "https://github.com/afeiship/webkit-cssui-absolute-center",
+  "homepage": "https://github.com/afeiship/<%= project_name%>",
   "moduleType": [
     "amd"
   ],
