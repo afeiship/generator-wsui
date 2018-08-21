@@ -1,5 +1,8 @@
 /*<%= project_name%> Start*/
-。<%= project_name%>(){
+$<%= project_name%>-options:(
+  color: #f00
+)!default;
+.<%= project_name%>{
   //Your code goes here.
 }
 /*<%= project_name%> End*/
