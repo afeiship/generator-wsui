@@ -36,16 +36,6 @@
     "yeoman-generator-helper": "afeiship/yeoman-generator-helper",
     "yeoman-test": "^1.0.0"
   },
-  "eslintConfig": {
-    "extends": "xo-space",
-    "env": {
-      "mocha": true
-    }
-  },
   "repository": "git@github.com:afeiship/generator-webkit-sassui.git",
-  "scripts": {
-    "prepublish": "gulp prepublish",
-    "test": "gulp"
-  },
   "license": "MIT"
 }
