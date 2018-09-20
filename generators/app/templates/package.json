@@ -15,9 +15,11 @@
   "main":"dist/<%= project_name%>.scss",
   "license": "MIT",
   "devDependencies": {
+    "autoprefixer": "^9.1.5",
     "del": "^2.2.1",
     "gulp": "^3.9.1",
     "gulp-load-plugins": "^1.2.0",
+    "gulp-postcss": "^8.0.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.3.2",
     "yargs": "^4.7.1"
