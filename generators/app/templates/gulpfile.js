@@ -16,6 +16,6 @@
   });
 
 
-  gulp.task('default', gulp.series(['clean', 'scripts']));
+  gulp.task('default', gulp.series(['clean', 'styles']));
 
 }());

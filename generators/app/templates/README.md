@@ -1,13 +1,12 @@
 # <%= project_name%>
 > <%= description %>
 
-## usage:
+## usage
 + https://afeiship.github.io/<%= project_name%>/
 
 ```scss
 @import 'node_modules/<%= project_name%>/dist/<%= project_name%>.scss';
 ```
 
-
-## resources:
+## resources
 + https://github.com/afeiship/generator-webkit-sassui
