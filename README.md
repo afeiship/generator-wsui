@@ -3,9 +3,9 @@
 
 ## installation
 ```bash
+# install yeoman
 npm install -g yo
-npm install -g generator-webkit-sassui
-
+npm install -g @feizheng/generator-webkit-sassui
 
 # private install
 git clone git@github.com:afeiship/generator-webkit-sassui.git
@@ -13,8 +13,7 @@ npm install
 npm link
 ```
 
-## new project:
-
+## usage
 ```bash
-yo webkit-sassui
+yo @feizheng/webkit-sassui
 ```
