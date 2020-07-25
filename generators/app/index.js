@@ -34,7 +34,7 @@ module.exports = class extends Generator {
     ];
 
     return this.prompt(prompts).then(
-      function(props) {
+      function (props) {
         // To access props later use this.props.someAnswer;
         this.props = props;
         yoHelper.rewriteProps(props);
@@ -47,14 +47,14 @@ module.exports = class extends Generator {
     remote(
       "afeiship",
       "boilerplate-webkit-sassui",
-      function(err, cachePath) {
+      (_, cachePath) => {
         // Copy files:
         this.fs.copy(
           glob.sync(resolve(cachePath, "{**,.*}")),
           this.destinationPath()
         );
         done();
-      }.bind(this)
+      }
     );
   }
 
