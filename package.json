@@ -18,6 +18,7 @@
     "yo"
   ],
   "dependencies": {
+    "@feizheng/next-npm-registries": "^1.0.0",
     "@feizheng/yeoman-generator-helper": "^1.0.13",
     "chalk": "^4.1.0",
     "replace-in-file": "^6.1.0",

@@ -8,6 +8,13 @@ const remote = require("yeoman-remote");
 const yoHelper = require("@feizheng/yeoman-generator-helper");
 const replace = require("replace-in-file");
 
+require('@feizheng/next-npm-registries');
+
+const NPM_CHOICES = ['npm', 'github', 'alo7'].map(item => {
+  return { name: item, value: nx.npmRegistries(item) };
+});
+
+
 module.exports = class extends Generator {
   prompting() {
     // Have Yeoman greet the user.
@@ -20,6 +27,18 @@ module.exports = class extends Generator {
     );
 
     const prompts = [
+      {
+        type: "input",
+        name: "scope",
+        message: "Your scope (eg: `babel`)?",
+        default: 'feizheng'
+      },
+      {
+        type: 'list',
+        name: 'registry',
+        message: 'Your registry',
+        choices: NPM_CHOICES
+      },
       {
         type: "input",
         name: "project_name",
@@ -59,16 +78,21 @@ module.exports = class extends Generator {
   }
 
   end() {
-    const { project_name, description } = this.props;
+    const { scope, project_name, description } = this.props;
     const files = glob.sync(resolve(this.destinationPath(), "{**,.*}"));
 
     replace.sync({
       files,
       from: [
+        /boilerplate-scope/g,
         /boilerplate-webkit-sassui-description/g,
         /boilerplate-webkit-sassui/g
       ],
-      to: [description, project_name]
+      to: [
+        scope,
+        description,
+        project_name
+      ]
     });
   }
 };
