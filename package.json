@@ -1,5 +1,5 @@
 {
-  "name": "@feizheng/generator-webkit-sassui",
+  "name": "@jswork/generator-webkit-sassui",
   "version": "1.0.0",
   "description": "Generator for webkit sass ui module.",
   "homepage": "https://github.com/afeiship/generator-webkit-sassui",
@@ -14,8 +14,8 @@
   "main": "generators/app/index.js",
   "keywords": [
     "yeoman",
-    "generator",
-    "yo"
+    "webkit",
+    "sass"
   ],
   "dependencies": {
     "@feizheng/next-npm-registries": "^1.0.0",
