@@ -5,15 +5,14 @@ const yosay = require("yosay");
 const glob = require("glob");
 const { resolve } = require("path");
 const remote = require("yeoman-remote");
-const yoHelper = require("@feizheng/yeoman-generator-helper");
+const yoHelper = require("@jswork/yeoman-generator-helper");
 const replace = require("replace-in-file");
 
-require('@feizheng/next-npm-registries');
+require("@jswork/next-npm-registries");
 
-const NPM_CHOICES = ['npm', 'github', 'alo7'].map(item => {
+const NPM_CHOICES = ["npm", "github", "alo7", "null"].map((item) => {
   return { name: item, value: nx.npmRegistries(item) };
 });
-
 
 module.exports = class extends Generator {
   prompting() {
@@ -31,26 +30,26 @@ module.exports = class extends Generator {
         type: "input",
         name: "scope",
         message: "Your scope (eg: `babel`)?",
-        default: 'jswork'
+        default: "jswork",
       },
       {
-        type: 'list',
-        name: 'registry',
-        message: 'Your registry',
-        choices: NPM_CHOICES
+        type: "list",
+        name: "registry",
+        message: "Your registry",
+        choices: NPM_CHOICES,
       },
       {
         type: "input",
         name: "project_name",
         message: "Your project_name (eg: like this `webkit-sassui-abc` )?",
-        default: yoHelper.discoverRoot
+        default: yoHelper.discoverRoot,
       },
       {
         type: "input",
         name: "description",
         message: "Your description?",
-        validate: Boolean
-      }
+        validate: Boolean,
+      },
     ];
 
     return this.prompt(prompts).then(
@@ -64,18 +63,14 @@ module.exports = class extends Generator {
 
   writing() {
     const done = this.async();
-    remote(
-      "afeiship",
-      "boilerplate-webkit-sassui",
-      (_, cachePath) => {
-        // Copy files:
-        this.fs.copy(
-          glob.sync(resolve(cachePath, "{**,.*}")),
-          this.destinationPath()
-        );
-        done();
-      }
-    );
+    remote("afeiship", "boilerplate-webkit-sassui", (_, cachePath) => {
+      // Copy files:
+      this.fs.copy(
+        glob.sync(resolve(cachePath, "{**,.*}")),
+        this.destinationPath()
+      );
+      done();
+    });
   }
 
   end() {
@@ -87,13 +82,9 @@ module.exports = class extends Generator {
       from: [
         /boilerplate-scope/g,
         /boilerplate-webkit-sassui-description/g,
-        /boilerplate-webkit-sassui/g
+        /boilerplate-webkit-sassui/g,
       ],
-      to: [
-        scope,
-        description,
-        project_name
-      ]
+      to: [scope, description, project_name],
     });
   }
 };
