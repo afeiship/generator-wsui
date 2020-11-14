@@ -20,7 +20,7 @@ module.exports = class extends Generator {
     this.log(
       yosay(
         `Welcome to the stunning ${chalk.red(
-          "generator-webkit-sassui"
+          "generator-wsui"
         )} generator!`
       )
     );
@@ -63,7 +63,7 @@ module.exports = class extends Generator {
 
   writing() {
     const done = this.async();
-    remote("afeiship", "boilerplate-webkit-sassui", (_, cachePath) => {
+    remote("afeiship", "boilerplate-wsui", (_, cachePath) => {
       // Copy files:
       this.fs.copy(
         glob.sync(resolve(cachePath, "{**,.*}")),

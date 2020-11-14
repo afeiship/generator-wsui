@@ -1,8 +1,8 @@
 {
-  "name": "@jswork/generator-webkit-sassui",
+  "name": "@jswork/generator-wsui",
   "version": "1.0.0",
   "description": "Generator for webkit sass ui module.",
-  "homepage": "https://github.com/afeiship/generator-webkit-sassui",
+  "homepage": "https://github.com/afeiship/generator-wsui",
   "author": {
     "name": "afeiship",
     "email": "1290657123@qq.com",
@@ -30,6 +30,12 @@
     "yeoman-remote": "^1.0.1",
     "yosay": "^2.0.2"
   },
-  "repository": "git@github.com:afeiship/generator-webkit-sassui.git",
-  "license": "MIT"
+  "repository": "git@github.com:afeiship/generator-wsui.git",
+  "license": "MIT",
+  "scripts": {
+    "release": "release-it"
+  },
+  "devDependencies": {
+    "release-it": "^14.2.1"
+  }
 }
