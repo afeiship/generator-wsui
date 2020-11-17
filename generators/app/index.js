@@ -81,8 +81,8 @@ module.exports = class extends Generator {
       files,
       from: [
         /boilerplate-scope/g,
-        /boilerplate-webkit-sassui-description/g,
-        /boilerplate-webkit-sassui/g,
+        /boilerplate-wsui-description/g,
+        /boilerplate-wsui/g,
       ],
       to: [scope, description, project_name],
     });
