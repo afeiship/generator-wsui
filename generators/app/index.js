@@ -41,7 +41,7 @@ module.exports = class extends Generator {
       {
         type: "input",
         name: "project_name",
-        message: "Your project_name (eg: like this `webkit-sassui-abc` )?",
+        message: "Your project_name (eg: like this `wsui-abc` )?",
         default: yoHelper.discoverRoot,
       },
       {
