@@ -22,13 +22,8 @@
     "scaffold"
   ],
   "dependencies": {
-    "@jswork/next-npm-registries": "^1.0.0",
-    "@jswork/yeoman-generator-helper": "^1.0.3",
-    "chalk": "^4.1.0",
-    "replace-in-file": "^6.1.0",
-    "yeoman-generator": "^4.11.0",
-    "yeoman-remote": "^1.0.1",
-    "yosay": "^2.0.2"
+    "@jswork/generator-prompts": "^1.1.7",
+    "@jswork/yeoman-generator": "^1.0.4"
   },
   "repository": "git@github.com:afeiship/generator-wsui.git",
   "license": "MIT",
